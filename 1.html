@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+	<html>
+
+		<head>
+			
+			<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+			<title>Login portal</title>
+		
+			<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+			<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+			<link rel="stylesheet" type="text/css" href="styles.css" >  
+			<script src="script.js"></script>
+
+		</head>
+
+		<body>
+		
+			<br><br>
+			<div id="divA" class="container" >
+
+		  		<div id="divA1">
+		  			<center>
+		  				<h4><em>Login to MIET Job Portal</em></h4>
+		  			</center>
+		  		</div>
+
+				<br><br>
+		   		
+		   		<div id="divA2">
+		   			<center>
+		   				<button onclick="fun2()" id="choice"  class="btn btn-primary" >Login as Job Applicant</button>
+		   				<button onclick="fun1()" id="choice"  class="btn btn-primary" >Login as Job Provider</button>
+		   			</center>
+		   		</div>
+
+		   		<br><br><br><br>
+		   	    
+		   	    <div id="divA3">
+		  				
+	  				<div id="divA31" >
+
+	    				<form method="POST" style="border:1px solid #000;"  action="login()"> <!--  onsubmit the users details need to be verified by the login() function... -->
+	  					<center> 
+		    				<label for="uname"><em>Email-id:  </em></label>
+							<input type="email" placeholder="Enter Email-id" id="uname" name="uname"  required >
+				
+							<br>
+							
+		    				<label for="upass"><em>Password:</em></label>
+		    				<input type="password" placeholder="Enter Password" id="upass" name="ucode"  required >
+		    				<input type="checkbox" onclick="pswtoggle()">Show Password       
+
+		    				<br><br>
+		    				<br>
+		    			
+		    				<input type="submit" class="btn btn-primary" value="Log In"  >
+		    				<h5>Not an existing user?<input type="button" onclick="lstoggle()" value="Create Account."></h5> <!-- redirect to licence number input page  -->
+		    			</center>
+		    			</form>
+	    			</div>
+
+	    			<div id="divA32" style="display: none">
+	    				<form method="POST" action="#" style="border:1px solid #000;" > <!--  onsubmit the users details need to be verified by the login() function... -->
+	  					<center> 
+		    				<label for="uname"><em>Email-id:&nbsp</em></label>
+							<input type="email" placeholder="Enter Email-id" id="uname" name="uname"  required >
+				
+							<br>
+							
+		    				<label for="upass"><em>Password:&nbsp</em></label>
+		    				<input type="password" placeholder="Enter Password" id="upass1" name="ucode"  required >
+		    				<input type="checkbox" onclick="pswtoggle1()">Show Password
+		    				<br>
+
+		    				<label for="ucode"><em>UserCode:</em></label>
+		    				<input type="password" placeholder="Enter Unique Code" id="ucode" name="ucode"  required >
+		    				<input type="checkbox" onclick="ucodetoggle()">Show the Code       
+		    				<br><br>
+		    				<br>
+		    				
+
+		    				<input type="submit" class="btn btn-primary" value="Log In" >
+		    				<h5>Not an existing user?<input type="button" onclick="lstoggle()" value="Create Account."></h5> <!-- redirect to licence number input page  -->
+		    			</center>
+		    			</form>
+	    			</div>
+
+		    	</div>
+		    </div>
+
+
+	    	<div class="container"  id="divB">
+
+	    		<div id="divB1">
+		  			<center>
+		  				<h4><em>Sign-Up to MIET Job Portal</em></h4>
+		  			</center>
+		  		</div>
+
+				<br><br>
+
+				<div id="divB2">
+		   			<center>
+		   				<button onclick="fun3()" id="choice"  class="btn btn-primary" >Sign-Up as Job Applicant</button>
+		   				<button onclick="fun4()" id="choice"  class="btn btn-primary" >Sign-Up as Job Provider</button>
+		   			</center>
+		   		</div>
+
+		   		<br><br><br><br>
+
+				<form method="POST" style="border:1px solid #ccc;" onsubmit="signup()" id="fs1">	
+			  			<center> 
+			    			<label for="firm"><em>Firm Name:</em></label>
+			    			<input type="text" name="firm" id="firm" placeholder="Example: Google, TCS, Wipro..." disabled required><br><br>
+
+			    			<label for="fname"><em>First Name:</em></label>
+			    			<input type="input" placeholder="Enter First Name." name="fname" id="fname" required><br>
+			    		
+			    			<label for="lname"><em>Last Name:&nbsp</em></label>
+			    			<input type="input" placeholder="Enter Last Name." name="lname" id="lname"><br>
+			    		
+			    			<label for="uid"><em>Email Id:&nbsp&nbsp&nbsp&nbsp&nbsp</em></label>
+			    			<input type="email" placeholder="Enter E-mail id." name="uid" id="uid" required><br>       
+			    	
+			    			<label for="pass"><em>Password:&nbsp&nbsp</em></label>
+			    			<input type="password" placeholder="Create Password, Minimum 6 characters." name="pass" id="pass" required><br>
+			    		
+			    			<label for="phone"><em>Mobile No.:</em></label>
+			    			<input type="number" name="phone" id="phone" value="91" required><br><br>
+			    	
+			    		  	<button class="btn btn-primary" >Continue</button><br>
+						</center>
+				</form>
+
+				<div>
+					<center>
+						<h5>Already Registered?<input type="button" onclick="sltoggle()" value="Login."></h5>
+					</center>
+				</div>
+
+			</div>
+
+		</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Search</title>		
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles.css" >
+	<script type="text/javascript" src="script.js"></script>
+</head>
+
+<body id="search">
+	<h1><em>Search</em></h1>
+	<hr>
+
+	<div>
+		<center>
+		 	<button onclick="job()" id="choice"  class="btn btn-primary" >JOBS</button>
+			<button onclick="recruiter()" id="choice"  class="btn btn-primary" >RECRUITERS</button>
+		</center>
+	</div>
+
+	<!--Division for id jobs-->
+	<div id="divjobs" class="container">
+
+		<div id="divjobs1">
+			<form action="1.html" method="post" onsubmit="return jobsearch()" style="border:1px solid #000;" name="myform">
+				<center>	
+					<label for="key">KeySkills, Designations, Companies :</label><br>
+					<input type="text" name="key" id="keys" align="right" required><br>
+
+					<label for="loc">Location/Locality :</label><br>
+					<input type="text" name="loc" id="local" align="right" required><br>
+
+					<label for="exp">Experience :</label><br>
+					Years:
+					<select name="exp" id="years">
+					    <option value="0">0 year(s)</option>
+					    <option value="1">1 year(s)</option>
+					    <option value="2">2 year(s)</option>
+					    <option value="3">3 year(s)</option>
+						<option value="4">4 year(s)</option>
+					    <option value="5">5 year(s)</option>
+					    <option value="6">6 year(s)</option>
+					    <option value="7">7 year(s)</option>
+					    <option value="8">8 year(s)</option>
+					    <option value="9">9 year(s)</option>
+					    <option value="10">10 year(s)</option>
+					    <option value="11">11 year(s)</option>
+					    <option value="12">12 year(s)</option>
+					    <option value="13">13 year(s)</option>
+					    <option value="14">14 year(s)</option>
+					    <option value="15">15 year(s)</option>
+					    <option value="16">16 year(s)</option>
+					    <option value="17">17 year(s)</option>
+					    <option value="18">18 year(s)</option>
+					    <option value="19">19 year(s)</option>
+					    <option value="20">20 year(s)</option>
+					    <option value="21">20+ year(s)</option>
+					</select>&nbsp&nbsp&nbsp&nbsp
+
+					Months:
+					<select id="months">
+					    <option value="0">0 month(s)</option>
+					    <option value="1">1 month(s)</option>
+					    <option value="2">2 month(s)</option>
+					    <option value="3">3 month(s)</option>
+						<option value="4">4 month(s)</option>
+					    <option value="5">5 month(s)</option>
+					    <option value="6">6 month(s)</option>
+					    <option value="7">7 month(s)</option>
+					    <option value="8">8 month(s)</option>
+					    <option value="9">9 month(s)</option>
+					    <option value="10">10 month(s)</option>
+					    <option value="11">11 month(s)</option>
+					</select><br><br>
+
+					<label>Minimum Salary (per year in INR) :</label><br>
+					<label for="lakh">Lakh(s):&nbsp</label>
+					<input type="number" name="lakh" id="lakh">
+
+					<label for="thousand">Thousand(s):&nbsp</label>
+					<input type="number" name="thousand" id="thousand">
+
+					<br><br>
+
+
+					<input type="submit" class="btn btn-primary" value="SEARCH" >
+				</center>
+			</form>
+		</div>
+
+
+
+
+	</div>
+
+
+
+</body>
+</html>
